@@ -1,0 +1,29 @@
+========================================
+QUICK FIX: TomTom API Key Error
+========================================
+
+STEP 1: Open this file in your editor:
+   e:\FlowGO\frontend\.env.local
+
+STEP 2: Make sure it contains (replace with YOUR real key):
+   VITE_TOMTOM_API_KEY=your_actual_api_key_from_tomtom
+
+STEP 3: Get your API key:
+   1. Go to: https://developer.tomtom.com
+   2. Sign up / Log in
+   3. Click "My Apps" → "Add a new app"
+   4. Name: "FlowGO", Platform: "Web"
+   5. Copy the API key
+
+STEP 4: Paste your key in .env.local:
+   VITE_TOMTOM_API_KEY=paste_your_key_here
+
+STEP 5: RESTART dev server:
+   - Press Ctrl+C in frontend terminal
+   - Run: npm run dev
+   - Wait 10 seconds
+   - Refresh browser
+
+========================================
+IMPORTANT: Must restart server after editing .env.local!
+========================================

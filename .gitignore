@@ -1,0 +1,97 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# RL Models & Artifacts
+rl/models/*.zip
+rl/artifacts/*.json
+rl/artifacts/logs/
+rl/artifacts/users.json
+rl/artifacts/verifications.json
+!rl/artifacts/.gitkeep
+
+# Datasets
+rl/datasets/*.csv
+rl/data/cctv/*.mp4
+
+# YOLO Model
+rl/yolov8n.pt
+
+# Camera Config (contains credentials)
+rl/config/camera_config.json
+
+# Node
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/dist/
+frontend/.vite/
+frontend/.cache/
+frontend/bun.lockb
+
+# Environment variables
+.env
+.env.local
+.env.production
+.env.development
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# SUMO
+*.sumo.log
+*.fcd.xml
+*.net.xml.bak
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Documentation builds
+docs/_build/
+docs/.doctrees/
