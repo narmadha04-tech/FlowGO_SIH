@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+    <location netOffset="0.00,0.00" convBoundary="0.00,0.00,200.00,200.00" origBoundary="0.00,0.00,200.00,200.00" projParameter="!"/>
+    <edge id="n2i" from="north" to="intersection" priority="1">
+        <lane id="n2i_0" index="0" speed="13.89" length="50.00" shape="100.00,0.00 100.00,50.00"/>
+    </edge>
+    <edge id="i2s" from="intersection" to="south" priority="1">
+        <lane id="i2s_0" index="0" speed="13.89" length="50.00" shape="100.00,50.00 100.00,100.00"/>
+    </edge>
+    <edge id="e2i" from="east" to="intersection" priority="1">
+        <lane id="e2i_0" index="0" speed="13.89" length="50.00" shape="200.00,100.00 150.00,100.00"/>
+    </edge>
+    <edge id="i2w" from="intersection" to="west" priority="1">
+        <lane id="i2w_0" index="0" speed="13.89" length="50.00" shape="150.00,100.00 100.00,100.00"/>
+    </edge>
+    <edge id="s2i" from="south" to="intersection" priority="1">
+        <lane id="s2i_0" index="0" speed="13.89" length="50.00" shape="100.00,100.00 100.00,50.00"/>
+    </edge>
+    <edge id="i2n" from="intersection" to="north" priority="1">
+        <lane id="i2n_0" index="0" speed="13.89" length="50.00" shape="100.00,50.00 100.00,0.00"/>
+    </edge>
+    <edge id="w2i" from="west" to="intersection" priority="1">
+        <lane id="w2i_0" index="0" speed="13.89" length="50.00" shape="0.00,100.00 50.00,100.00"/>
+    </edge>
+    <edge id="i2e" from="intersection" to="east" priority="1">
+        <lane id="i2e_0" index="0" speed="13.89" length="50.00" shape="50.00,100.00 100.00,100.00"/>
+    </edge>
+    <junction id="intersection" type="traffic_light" x="100.00" y="100.00" incLanes="n2i_0 e2i_0 s2i_0 w2i_0" intLanes=":intersection_0_0 :intersection_0_1 :intersection_0_2 :intersection_0_3" shape="95.00,95.00 105.00,95.00 105.00,105.00 95.00,105.00">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+        <request index="2" response="00" foes="00" cont="0"/>
+        <request index="3" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="north" type="dead_end" x="100.00" y="0.00" incLanes="i2n_0" intLanes="" shape="95.00,-5.00 105.00,-5.00 105.00,5.00 95.00,5.00"/>
+    <junction id="south" type="dead_end" x="100.00" y="100.00" incLanes="i2s_0" intLanes="" shape="95.00,95.00 105.00,95.00 105.00,105.00 95.00,105.00"/>
+    <junction id="east" type="dead_end" x="200.00" y="100.00" incLanes="i2e_0" intLanes="" shape="195.00,95.00 205.00,95.00 205.00,105.00 195.00,105.00"/>
+    <junction id="west" type="dead_end" x="0.00" y="100.00" incLanes="i2w_0" intLanes="" shape="-5.00,95.00 5.00,95.00 5.00,105.00 -5.00,105.00"/>
+    <tlLogic id="TL" type="static" programID="0" offset="0">
+        <phase duration="31" state="GGGrrrGGGrrr"/>
+        <phase duration="5" state="yyyrrryyyrrr"/>
+        <phase duration="31" state="rrrGGGrrrGGG"/>
+        <phase duration="5" state="rrryyyrrryyy"/>
+    </tlLogic>
+</net>
+

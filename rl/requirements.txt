@@ -1,0 +1,53 @@
+# Core Dependencies
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+pydantic>=2.0.0
+python-jose[cryptography]>=3.3.0
+python-multipart>=0.0.6
+
+# ML/RL
+stable-baselines3>=2.0.0
+gymnasium>=0.29.0
+numpy>=1.24.0
+pandas>=2.0.0
+opencv-python>=4.8.0
+ultralytics>=8.0.0
+
+# Traffic Simulation
+traci>=1.25.0
+sumolib>=1.25.0
+
+# Report Generation
+reportlab>=4.0.0
+pillow>=10.0.0
+
+# Performance Monitoring & Profiling
+psutil>=5.9.0
+memory-profiler>=0.60.0
+pyinstrument>=4.0.0
+py-spy>=0.3.14
+
+# Model Versioning & Experiment Tracking
+mlflow>=2.8.0
+wandb>=0.16.0
+
+# Testing & Validation
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-benchmark>=4.0.0
+
+# Type Checking & Linting
+mypy>=1.5.0
+types-psutil>=5.9.5
+black>=23.7.0
+isort>=5.12.0
+
+# Security
+python-dotenv>=1.0.0
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.0.1
+
+# Utils
+tqdm>=4.66.0
+python-dateutil>=2.8.2
+pytz>=2023.3

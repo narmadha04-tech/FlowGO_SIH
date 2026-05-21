@@ -1,0 +1,36 @@
+{
+  "_comment": "Example camera configuration file. Copy this to camera_config.json and update with your credentials.",
+  "cameras": [
+    {
+      "id": "CAM-001",
+      "name": "North Approach Camera",
+      "location": "Junction 12 - North",
+      "type": "rtsp",
+      "url_template": "rtsp://{username}:{password}@{ip}:{port}{path}",
+      "approach": "north",
+      "enabled": true,
+      "ip": "192.168.1.100",
+      "port": 554,
+      "path": "/stream1",
+      "credentials": {
+        "username": "admin",
+        "password": "CHANGE_THIS_PASSWORD"
+      }
+    },
+    {
+      "id": "CAM-002",
+      "name": "Local Video File",
+      "location": "Junction 12 - East",
+      "type": "file",
+      "url": "data/cctv/cam1_north.mp4",
+      "approach": "east",
+      "enabled": true
+    }
+  ],
+  "default_rtsp_port": 554,
+  "default_rtsp_path": "/stream1",
+  "connection_timeout": 10,
+  "reconnect_attempts": 3,
+  "frame_buffer_size": 30
+}
+
