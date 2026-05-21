@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Smart City Traffic Control - Dark Theme with Gold Accents */
+    --background: 220 25% 8%;
+    --foreground: 220 10% 95%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 10% 95%;
+
+    --popover: 220 22% 10%;
+    --popover-foreground: 220 10% 95%;
+
+    --primary: 45 90% 55%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 18% 18%;
+    --secondary-foreground: 220 10% 95%;
+
+    --muted: 220 18% 15%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 190 95% 50%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 220 10% 95%;
+
+    --success: 142 76% 45%;
+    --success-foreground: 220 25% 8%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 25% 8%;
+
+    --border: 220 18% 22%;
+    --input: 220 18% 18%;
+    --ring: 45 90% 55%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 220 22% 10%;
+    --sidebar-foreground: 220 10% 85%;
+    --sidebar-primary: 45 90% 55%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 18% 15%;
+    --sidebar-accent-foreground: 45 90% 55%;
+    --sidebar-border: 220 18% 18%;
+    --sidebar-ring: 45 90% 55%;
+
+    /* Control room glow effects */
+    --glow-primary: 45 90% 55%;
+    --glow-accent: 190 95% 50%;
+    --glow-success: 142 76% 45%;
+    --glow-danger: 0 72% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations and utilities */
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsla(var(--glow-primary) / 0.3);
+  }
+  
+  .glow-accent {
+    box-shadow: 0 0 20px hsla(var(--glow-accent) / 0.3);
+  }
+
+  .glow-success {
+    box-shadow: 0 0 20px hsla(var(--glow-success) / 0.3);
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-primary via-yellow-400 to-primary bg-clip-text text-transparent;
+  }
+}
+/* Map container */
+.tt-map {
+  width: 100%;
+  height: 100%;
+}
+
+/* Custom marker styles */
+.marker {
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.marker:hover {
+  transform: scale(1.2);
+}
